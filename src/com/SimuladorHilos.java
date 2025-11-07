@@ -36,6 +36,6 @@ public class SimuladorHilos {
 	}
 
 	public static void main(String[] args){
-		nHilos(5);
+		nHilos(5); // Prueba con 5 hilos
 	}
 }
