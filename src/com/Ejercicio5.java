@@ -12,12 +12,14 @@ public class Ejercicio5 {
 			for (int i = 0; i < 5; i++) {
 				System.out.println("Hola desde hilo A");
 			}
+			System.out.println("Con el ID: " + Thread.currentThread().getId());
 		});
 
 		Thread b = new Thread(() -> {
 			for (int i = 0; i < 5; i++) {
 				System.out.println("Hola desde hilo B");
 			}
+			System.out.println("Con el ID: " + Thread.currentThread().getId());
 		});
 
 		// En el main, arranca primero A con a.start().
