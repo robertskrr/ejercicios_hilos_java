@@ -1,10 +1,12 @@
 package com;
 
+/**
+ * Muestra los estados de un hilo antes de arrancar, mientras está trabajando y
+ * una vez que ha terminado.
+ */
 public class Ejercicio4 {
 
 	public static void main(String[] args) {
-		// Muestra los estados de un hilo antes de arrancar, mientras está trabajando y
-		// una vez que ha terminado.
 
 		// Crea un Thread cuyo run() haga sleep(500).
 		Thread hilo = new Thread(() -> {
