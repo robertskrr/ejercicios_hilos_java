@@ -7,7 +7,6 @@ package com;
 public class Ejercicio4 {
 
 	public static void main(String[] args) {
-
 		// Crea un Thread cuyo run() haga sleep(500).
 		Thread hilo = new Thread(() -> {
 			System.out.println("Hilo: " + Thread.currentThread().getName());
