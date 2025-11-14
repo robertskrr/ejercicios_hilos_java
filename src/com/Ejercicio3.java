@@ -1,22 +1,29 @@
 package com;
 
+/**
+ * Crea un hilo que imprima los números del 1 al 5, haciendo una pausa de 1
+ * segundo entre cada número.
+ */
 public class Ejercicio3 {
 
 	public static void main(String[] args) {
-		// Crea un hilo que imprima los números del 1 al 5, haciendo una pausa de 1
-		// segundo entre cada número.
 
+		// En run(), usa un for del 1 al 5.
 		Thread hilo = new Thread(() -> {
 			for (int i = 1; i <= 5; i++) {
 				System.out.println("Soy: " + Thread.currentThread().getName() + ", i: " + i);
+				// En cada iteración imprime el número y llama a Thread.sleep(1000).
 				try {
 					Thread.sleep(1000);
+					// Captura InterruptedException con try/catch.
 				} catch (InterruptedException e) {
 				}
 			}
 		});
 
 		hilo.start();
+		
+		// Comprueba que el hilo principal puede seguir haciendo otras cosas mientras tanto.
 		for (int i = 0; i < 10; i++) {
 			System.out.println("Soy: " + Thread.currentThread().getName() + ", i: " + i);
 			try {
